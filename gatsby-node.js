@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require('path');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
@@ -22,45 +22,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               image
               heading
               description
-              intro {
-                blurbs {
-                  image
-                  text
-                }
-                heading
-                description
-              }
-              main {
-                heading
-                description
-                image1 {
-                  alt
-                  image
-                }
-                image2 {
-                  alt
-                  image
-                }
-                image3 {
-                  alt
-                  image
-                }
-              }
-              testimonials {
-                author
-                quote
-              }
-              full_image
-              pricing {
-                heading
-                description
-                plans {
-                  description
-                  items
-                  plan
-                  price
-                }
-              }
             }
           }
         }
@@ -81,8 +42,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          path: pagePath
-        }
+          path: pagePath,
+        },
       });
     });
   });
