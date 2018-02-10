@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
@@ -19,8 +19,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               date
               title
-              image
-              heading
               description
             }
           }
@@ -42,8 +40,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          path: pagePath,
-        },
+          path: pagePath
+        }
       });
     });
   });
