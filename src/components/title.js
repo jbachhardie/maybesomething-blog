@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { red, orange, green, yellow, blue } from '../style/color'
 
 const Hero = styled.header`
   height: 90vh;
@@ -15,9 +16,26 @@ const TitleText = styled.h1`
 `
 
 const RainbowText = styled.span`
-  background: -webkit-linear-gradient(#eee, #333);
+  background: linear-gradient(
+    to right,
+    ${red},
+    ${red} 20%,
+    ${orange} 20%,
+    ${orange} 40%,
+    ${green} 40%,
+    ${green} 60%,
+    ${yellow} 60%,
+    ${yellow} 80%,
+    ${blue} 80%
+  );
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: 1s ease-in-out;
+  &:hover {
+    background-size: 50% 100%;
+    background-position: -50% -50%;
+  }
 `
 
 const OutlineText = styled.span`
