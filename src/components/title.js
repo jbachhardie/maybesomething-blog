@@ -57,7 +57,7 @@ const OutlineText = styled.span`
   -webkit-text-stroke-color: black;
 `
 
-const Subtitle = styled.p`
+const Subtitle = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
